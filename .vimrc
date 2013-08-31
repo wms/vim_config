@@ -17,6 +17,9 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'MarcWeber/vim-addon-local-vimrc'
+Bundle 'mattn/emmet-vim'
+Bundle 'othree/html5.vim'
+Bundle 'mhinz/vim-startify'
 
 syntax on
 filetype plugin indent on
@@ -167,3 +170,15 @@ let g:syntastic_html_checkers = []
 
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1
+
+" emmet
+let g:user_emmet_leader_key='<C-e>'
+
+" YCM doesn't play nice with emmet, so disable it for html as a workaround
+let g:ycm_filetype_blacklist = {
+      \ 'notes' : 1,
+      \ 'markdown' : 1,
+      \ 'text' : 1,
+      \ 'unite' : 1,
+      \ 'html' : 1,
+      \}
