@@ -1,7 +1,9 @@
+set shell=/bin/sh
 set nocompatible
 filetype off
 
 set rtp+=~/vim_config/bundle/vundle/
+set rtp+=~/vim_config/snippets
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
@@ -20,6 +22,12 @@ Bundle 'MarcWeber/vim-addon-local-vimrc'
 Bundle 'mattn/emmet-vim'
 Bundle 'othree/html5.vim'
 Bundle 'mhinz/vim-startify'
+Bundle 'groenewege/vim-less'
+Bundle "SirVer/ultisnips"
+Bundle "honza/vim-snippets"
+Bundle "wesgibbs/vim-irblack"
+Bundle "brookhong/DBGPavim"
+Bundle "mehlah/vim-li3"
 
 syntax on
 filetype plugin indent on
@@ -77,11 +85,9 @@ set wildmenu
 " get rid of the characters in window separators
 set fillchars=""
 
-" tabs to 4 spaces
-set expandtab
+" represent tabs as 4 spaces
 set tabstop=4
 set shiftwidth=4
-set shiftround
 
 " enable search highlighting
 set hlsearch
@@ -108,6 +114,9 @@ if has("gui_running")
     set background=dark
 	colo solarized
     set guifont=Source\ Code\ Pro,Consolas:h12
+else
+	"colo ir_black
+    colo ir_black
 endif
 
 " hide the mouse pointer while typing
@@ -162,6 +171,7 @@ endif
 " delimitMate
 let g:delimitMate_expand_cr = 1
 let g:delitMate_balance_matchpairs = 1
+let g:delimitMate_matchpairs = "(:),[:],{:}"
 
 " syntastic
 let g:syntastic_auto_loc_list = 1
@@ -182,3 +192,8 @@ let g:ycm_filetype_blacklist = {
       \ 'unite' : 1,
       \ 'html' : 1,
       \}
+
+let g:UltiSnipsSnippetsDir = "~/vim_config/snippets/"
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
