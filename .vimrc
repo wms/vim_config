@@ -7,7 +7,6 @@ set rtp+=~/vim_config/snippets
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'kien/ctrlp.vim'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'pangloss/vim-javascript'
@@ -110,13 +109,11 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 
 " gui
 
+colo lithium
+
 if has("gui_running")
     set background=dark
-	colo solarized
     set guifont=Source\ Code\ Pro,Consolas:h12
-else
-	"colo ir_black
-    colo ir_black
 endif
 
 " hide the mouse pointer while typing
