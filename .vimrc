@@ -1,4 +1,4 @@
-set shell=/bin/sh
+set shell=/bin/bash
 set nocompatible
 filetype off
 
@@ -27,6 +27,8 @@ Bundle "honza/vim-snippets"
 Bundle "wesgibbs/vim-irblack"
 Bundle "brookhong/DBGPavim"
 Bundle "mehlah/vim-li3"
+Bundle "Quramy/tsuquyomi"
+Bundle 'editorconfig/editorconfig-vim'
 
 syntax on
 filetype plugin indent on
@@ -113,7 +115,7 @@ colo lithium
 
 if has("gui_running")
     set background=dark
-    set guifont=Source\ Code\ Pro,Consolas:h12
+    set guifont=Source\ Code\ Pro\ For\ Powerline:h14
 endif
 
 " hide the mouse pointer while typing
@@ -152,8 +154,7 @@ map <leader>l :ll<CR>
 " plugins
 
 " powerline
-set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-
+set rtp+=$HOME/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
 " ctrlp
 let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
 let g:ctrlp_working_path_mode = 0
